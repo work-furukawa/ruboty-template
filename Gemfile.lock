@@ -1,3 +1,11 @@
+GIT
+  remote: git://github.com/work-furukawa/ruboty-whatday.git
+  revision: b15f80fe6d1fee17dc4049c100c5f091bf6cb9fb
+  specs:
+    ruboty-whatday (0.1.0)
+      ruboty
+      wikipedia-client
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -8,9 +16,20 @@ GEM
       tzinfo (~> 1.1)
     concurrent-ruby (1.0.2)
     dotenv (2.1.1)
+    event_emitter (0.2.6)
+    eventmachine (1.2.7)
+    faraday (0.17.0)
+      multipart-post (>= 1.2, < 3)
+    faraday_middleware (0.10.1)
+      faraday (>= 0.7.4, < 1.0)
+    faye-websocket (0.10.9)
+      eventmachine (>= 0.12.0)
+      websocket-driver (>= 0.5.1)
     i18n (0.7.0)
     mem (0.1.5)
     minitest (5.9.1)
+    multi_json (1.14.1)
+    multipart-post (2.1.1)
     rake (11.3.0)
     ruboty (1.2.4)
       activesupport
@@ -21,10 +40,28 @@ GEM
     ruboty-slack (0.1.12)
       ruboty (>= 1.0.4)
       xrc (>= 0.1.8)
+    ruboty-slack_rtm (3.2.1)
+      faraday (~> 0.11)
+      ruboty (>= 1.1.4)
+      slack-api (~> 1.6)
+      websocket-client-simple (~> 0.3.0)
+    slack-api (1.6.1)
+      faraday (~> 0.11)
+      faraday_middleware (~> 0.10.0)
+      faye-websocket (~> 0.10.6)
+      multi_json (~> 1.0, >= 1.0.3)
     slop (4.4.1)
     thread_safe (0.3.5)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
+    websocket (1.2.8)
+    websocket-client-simple (0.3.0)
+      event_emitter
+      websocket
+    websocket-driver (0.7.1)
+      websocket-extensions (>= 0.1.0)
+    websocket-extensions (0.1.4)
+    wikipedia-client (1.10.0)
     xrc (0.1.8)
       activesupport
 
@@ -34,6 +71,8 @@ PLATFORMS
 DEPENDENCIES
   rake
   ruboty-slack
+  ruboty-slack_rtm
+  ruboty-whatday!
 
 BUNDLED WITH
-   1.13.6
+   1.17.3
